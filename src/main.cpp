@@ -7,7 +7,7 @@
 
 int main() {
     BST<std::string> tree;
-    const char* filename = "war_peace.txt";   // файл лежит в папке с проектом
+    const char* filename = "war_peace.txt";
 
     makeTree(tree, filename);
     std::cout << "Depth: " << tree.depth() << std::endl;
