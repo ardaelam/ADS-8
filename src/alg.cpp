@@ -1,7 +1,6 @@
-// Copyright 2021 NNTU-CS
+// Copyright 2025 NNTU-CS
 #include "alg.h"
 
-#include "bst.h"
 #include <algorithm>
 #include <cctype>
 #include <fstream>
