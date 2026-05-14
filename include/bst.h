@@ -1,6 +1,6 @@
 // Copyright 2021 NNTU-CS
-#ifndef BST_H
-#define BST_H
+#ifndef INCLUDE_BST_H__
+#define INCLUDE_BST_H__
 
 #include <string>
 #include <algorithm>
@@ -9,13 +9,13 @@
 
 template<typename T>
 class BST {
-private:
+ private:
     struct Node {
         T key;
         int count;
         Node* left;
         Node* right;
-        Node(const T& k) : key(k), count(1), left(nullptr), right(nullptr) {}
+        explicit Node(const T& k) : key(k), count(1), left(nullptr), right(nullptr) {}
     };
     Node* root;
 
@@ -38,9 +38,9 @@ private:
         return node->count;
     }
 
-    int depth(Node* node) const {
-        if (!node) return 0;
-        return 1 + std::max(depth(node->left), depth(node->right));
+    int height(Node* node) const {
+        if (!node) return -1;
+        return 1 + std::max(height(node->left), height(node->right));
     }
 
     void clear(Node* node) {
@@ -59,7 +59,7 @@ private:
         }
     }
 
-public:
+ public:
     BST() : root(nullptr) {}
     ~BST() { clear(root); }
 
@@ -72,7 +72,7 @@ public:
     }
 
     int depth() const {
-        return depth(root);
+        return height(root);
     }
 
     std::vector<std::pair<T, int>> getAllNodes() const {
@@ -82,4 +82,4 @@ public:
     }
 };
 
-#endif  // INCLUDE_BST_H_
+#endif  // INCLUDE_BST_H__
