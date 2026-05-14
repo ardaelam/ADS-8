@@ -1,5 +1,8 @@
+// Copyright 2025 NNTU-CS
 #ifndef INCLUDE_ALG_H__
 #define INCLUDE_ALG_H__
+
+#include <string>
 
 #include "bst.h"
 
