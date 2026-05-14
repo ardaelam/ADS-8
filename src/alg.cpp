@@ -1,7 +1,7 @@
 // Copyright 2021 NNTU-CS
-// cpplint: disable=build/include_order
-#include "bst.h"
+#include "alg.h"
 
+#include "bst.h"
 #include <algorithm>
 #include <cctype>
 #include <fstream>
