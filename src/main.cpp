@@ -1,16 +1,13 @@
 // Copyright 2021 NNTU-CS
-// cpplint: disable=build/include_order
-#include "bst.h"
+#include "main.h"
 
+#include "alg.h"
 #include <iostream>
 #include <string>
 
-void makeTree(BST<std::string>& tree, const char* filename);
-void printFreq(BST<std::string>& tree);
-
 int main() {
     BST<std::string> tree;
-    const char* filename = "src/war_peace.txt";   // измени при необходимости
+    const char* filename = "war_peace.txt";   // файл лежит в папке с проектом
 
     makeTree(tree, filename);
     std::cout << "Depth: " << tree.depth() << std::endl;
