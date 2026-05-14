@@ -63,18 +63,9 @@ class BST {
     BST() : root(nullptr) {}
     ~BST() { clear(root); }
 
-    void add(const T& key) {
-        insert(root, key);
-    }
-
-    int search(const T& key) const {
-        return search(root, key);
-    }
-
-    int depth() const {
-        return height(root);
-    }
-
+    void add(const T& key) { insert(root, key); }
+    int search(const T& key) const { return search(root, key); }
+    int depth() const { return height(root); }
     std::vector<std::pair<T, int>> getAllNodes() const {
         std::vector<std::pair<T, int>> vec;
         inorderCollect(root, vec);
